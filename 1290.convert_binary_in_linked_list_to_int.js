@@ -52,3 +52,4 @@ var getDecimalValue = function(head) {
     }
     return parseInt(str, 2)
 };
+  
