@@ -39,9 +39,9 @@
 // we sum the values plus carryOver
 // create new node and set value to node, point node to previous node if able to
 
-l1 = 243
-l2 = 564
-expected = 708
+// l1 = 243
+// l2 = 564
+// expected = 708
 
 
 var addTwoNumbers = function (l1, l2) {
