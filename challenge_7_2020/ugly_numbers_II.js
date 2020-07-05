@@ -50,3 +50,4 @@ var nthUglyNumber = function (n) {
   }
   return uglyNum;
 };
+
