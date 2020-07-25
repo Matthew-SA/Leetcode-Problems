@@ -18,9 +18,6 @@
 // 1 <= a.length, b.length <= 10^4
 // Each string is either "0" or doesn't contain any leading zero.
 
-
-// Simple Solution:
-
 /**
  * @param {string} a
  * @param {string} b
@@ -53,32 +50,4 @@ const test = num => {
   return num & ~(num-1)
 }
 
-// Optimized solution:
 
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-const singleNumber = nums => {
-  let xorNum = nums.reduce((acc, num) => acc ^ num);
-  let bitXor = xorNum.toString(2);
-
-  for (i = bitXor.length; i > 0; i--) {
-    if (bitXor[i] == 1) {
-      firstXorSetBit = bitXor.length - i;
-      break;
-    }
-  }
-  
-  let num1 = null,
-      num2 = null;
-  
-  nums.forEach(num => {
-    if (num & 1 << firstXorSetBit - 1) {
-      num1 = num1 === null ? num1 = num : num1 ^= num;
-    } else {
-      num2 = num2 === null ? num2 = num : num2 ^= num;
-    }
-  });
-  return [num1,num2];
-};
