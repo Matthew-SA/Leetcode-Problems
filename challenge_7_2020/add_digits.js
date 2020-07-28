@@ -33,3 +33,26 @@ const addDigits = (num) => {
 
   return addDigits(sum);
 };
+
+// https://www.omdbapi.com/?i=${imdb-id}&apikey=75a5d7f7
+// https://www.omdbapi.com/?i=tt0076759&apikey=75a5d7f7
+
+function mergeStrings(s1, s2) {
+    let s1count = {},
+        s2count = {},
+        result = "";
+        
+    for (let i = 0; i < s1.length; i++) s1count[s1[i]] ? s1count[s1[i]] += 1 : s1count[s1[i]] = 1;
+    for (let i = 0; i < s2.length; i++) s2count[s2[i]] ? s2count[s2[i]] += 1 : s2count[s2[i]] = 1;
+    
+    let totalLength = s1.length + s2.length,
+        i = 0,
+        j = 0;
+        
+    while (result.length < totalLength) {
+        if (s1count[s[i]] < s2count[s[j]])
+    };
+}
+
+
+
